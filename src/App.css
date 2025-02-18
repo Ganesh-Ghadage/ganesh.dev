@@ -1,0 +1,18 @@
+/* #root {
+  width: 100dvw;
+
+}
+
+#root::-webkit-scrollbar {
+  width: 8px;
+}
+
+#root::-webkit-scrollbar-track {
+  background: #0d0d0d;
+}
+
+#root::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #ff00ff, #00ffff);
+  border-radius: 10px;
+  box-shadow: 0 0 5px #ff00ff, 0 0 5px #00ffff;
+} */
