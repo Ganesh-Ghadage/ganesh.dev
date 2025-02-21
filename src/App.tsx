@@ -8,6 +8,8 @@ import { StackingNavbar } from './components/ui/stacking-navbar';
 import { AboutSection } from './components/sections/About';
 import { MarqueeStrip } from './components/ui/marquee-strip';
 import { Work } from './components/sections/Work';
+import { Project } from './components/sections/Project';
+
 
 const App: React.FC = () => {
   return (
@@ -36,8 +38,9 @@ const App: React.FC = () => {
             <Work />
           </div>
 
-          <div id="projects" className="h-screen flex flex-col">
+          <div id="projects" className="h-[140vh] flex flex-col">
             <h1 className='text-3xl text-muted pt-16 pl-10'>Project Showoff</h1>
+            <Project />
           </div>
 
           <div id="contact" className="h-screen flex flex-col">
