@@ -7,6 +7,18 @@ import { HomeIcon, MenuIcon, CircleUserRound, BriefcaseBusiness, FolderGit2, Sen
 
 const StackingNavbar = () => {
 const [expanded, setExpanded] = useState(false);
+const [isMobile, setIsMobile] = useState(false);
+
+React.useEffect(() => {
+  const checkMobile = () => {
+    setIsMobile(window.innerWidth <= 768);
+  };
+  checkMobile();
+  window.addEventListener("resize", checkMobile);
+  return () => {
+    window.removeEventListener("resize", checkMobile);
+  };
+}, []);
 
 const items = [
   { to: "#", icon: <MenuIcon />},
@@ -19,9 +31,10 @@ const items = [
 
 return (
   <div
-    className="flex flex-col md:flex-row items-start md:justify-center gap-y-2 md:gap-x-2"
+    className={`flex ${isMobile ? 'flex-col items-start gap-y-2 h-10' : 'flex-row justify-center gap-x-2'} `}
     onMouseEnter={() => setExpanded(true)}
     onMouseLeave={() => setExpanded(false)}
+    
   >
     {items.map((item, index) => (
       <StackingNavbarItem
@@ -29,6 +42,7 @@ return (
         expanded={expanded}
         key={index}
         index={index}
+        isMobile={isMobile}
       >
         <div className="flex gap-2">
           <h1>{item.icon}</h1>
@@ -41,22 +55,25 @@ return (
 };
 
 const StackingNavbarItem = ({
-to,
-children,
-style,
-expanded,
-index,
-}: {
-to: string;
-children: React.ReactNode;
-style?: React.CSSProperties;
-expanded: boolean;
-index: number;
-}) => {
+  to,
+  children,
+  style,
+  expanded,
+  index,
+  isMobile
+  }: {
+  to: string;
+  children: React.ReactNode;
+  style?: React.CSSProperties;
+  expanded: boolean;
+  index: number;
+  isMobile: boolean;
+  }) => {
+
 return (
   <motion.div
-    initial={{ x: -200 * index }}
-    animate={{ x: expanded ? 0 : -200 * index }}
+    initial={isMobile ? {y: -100 * index , x: -200 * index  } : { x: -200 * index }}
+    animate={isMobile ? {y: expanded ? 0 : -200 * index , x: 0} :{ x: expanded ? 0 : -200 * index }}
     transition={{
       duration: 0.6,
       ease: "circInOut",
