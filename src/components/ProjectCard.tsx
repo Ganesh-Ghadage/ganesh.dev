@@ -44,7 +44,7 @@ function ProjectCard({project} : {project: ProjectInterface}) {
                 </motion.div>
               ))}
             </div>
-            <div className="py-10 p-4 flex flex-col gap-y-2  mx-auto h-[50vh] md:h-fit overflow-y-auto">
+            <div className="py-10 p-4 flex flex-col gap-y-2  mx-auto h-[50vh] md:h-fit overflow-y-auto scrollbar-hidden">
               {project.desciption.point.map((pnt, idx) => (
                 <p className="text-sm text-neutral-600 dark:text-neutral-100" key={idx}>
                   {pnt}
