@@ -64,7 +64,7 @@ const Slide = ({ project, index, current, handleSlideClick }: SlideProps) => {
     <div className="[perspective:1200px] [transform-style:preserve-3d] z-10">
       <li
         ref={slideRef}
-        className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[90vmin] h-[150vh] mx-[4vmin] z-10 "
+        className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[90vmin] h-[110vh] mx-[4vmin] z-10 "
         onClick={() => handleSlideClick(index)}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
@@ -78,7 +78,7 @@ const Slide = ({ project, index, current, handleSlideClick }: SlideProps) => {
         }}
       >
         <div
-          className="absolute top-0 left-0 w-full h-fit bg-[#1D1F2F] rounded-[3%] overflow-hidden transition-all duration-150 ease-out"
+          className="absolute top-0 left-0 w-full h-fit rounded-xl overflow-hidden transition-all duration-150 ease-out"
           style={{
             transform:
               current === index
@@ -144,11 +144,25 @@ export function Carousel({ projects }: CarouselProps) {
 
   return (
     <div
-      className="relative w-[70vmin] h-[110vh] mx-auto"
+      className="relative w-[100vmin] h-[120vh] md:mx-auto ml-5"
       aria-labelledby={`carousel-heading-${id}`}
     >
+      <div className=" flex justify-center w-full top-[calc(100%+1rem)]">
+        <CarouselControl
+          type="previous"
+          title="Go to previous slide"
+          handleClick={handlePreviousClick}
+        />
+
+        <CarouselControl
+          type="next"
+          title="Go to next slide"
+          handleClick={handleNextClick}
+        />
+      </div>
+
       <ul
-        className="absolute flex mx-[-4vmin] transition-transform duration-1000 ease-in-out"
+        className="absolute flex h-[100vh] mt-5 mx-[-4vmin] transition-transform duration-1000 ease-in-out"
         style={{
           transform: `translateX(-${current * (100 / projects.length)}%)`,
         }}
