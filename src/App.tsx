@@ -28,23 +28,23 @@ const App: React.FC = () => {
           </div>
 
           <div id="about" className="sm:h-[140vh] md:h-[200vh] lg:h-screen flex flex-col">
-            <h1 className='text-3xl text-muted pt-16 pl-4 md:pl-10'>About Me</h1>
+            <h1 className='text-3xl text-muted pt-4 pl-20'>About Me</h1>
             <AboutSection />
             <MarqueeStrip />
           </div>
 
-          <div id="work" className="h-screen flex flex-col">
-            <h1 className='text-3xl text-muted pt-16 pl-10'>Work Experience</h1>
+          <div id="work" className="h-fit flex flex-col">
+            <h1 className='text-3xl text-muted pt-4 pl-20'>Work Experience</h1>
             <Work />
           </div>
 
-          <div id="projects" className="h-[140vh] flex flex-col">
-            <h1 className='text-3xl text-muted pt-16 pl-10'>Project Showoff</h1>
+          <div id="projects" className="h-[150vh] flex flex-col">
+            <h1 className='text-3xl text-muted pt-4 pl-20'>Project Showoff</h1>
             <Project />
           </div>
 
           <div id="contact" className="h-screen flex flex-col">
-            <h1 className='text-3xl text-muted pt-16 pl-10'>Contact</h1>
+            <h1 className='text-3xl text-muted pt-4 pl-20'>Contact</h1>
           </div>
         </div>
       </CoolMode>
