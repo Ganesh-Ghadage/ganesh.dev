@@ -28,11 +28,11 @@ export const projects = [
         link: "https://car-marketplace-jade.vercel.app/",
         gitLink: "https://github.com/Ganesh-Ghadage/car-marketplace",
         images: [
-            "https://res.cloudinary.com/dekb8xlms/image/upload/v1740148560/Portfolio/c209faf2-658e-4b16-a183-ca38906ce61c.png",
+            "https://res.cloudinary.com/dekb8xlms/image/upload/v1740148720/Portfolio/69726646-3cd6-4c9b-a066-e1421984d489.png",
             "https://res.cloudinary.com/dekb8xlms/image/upload/v1740148600/Portfolio/f3ae60e6-f6dc-4806-86f0-f2c2524de654.png",
             "https://res.cloudinary.com/dekb8xlms/image/upload/v1740148633/Portfolio/11b35275-185c-4850-9626-f31a7b0ab9c0.png",
+            "https://res.cloudinary.com/dekb8xlms/image/upload/v1740148560/Portfolio/c209faf2-658e-4b16-a183-ca38906ce61c.png",
             "https://res.cloudinary.com/dekb8xlms/image/upload/v1740148708/Portfolio/5d66f8f1-bc92-4128-aba2-0018f4d9ae7f.png",
-            "https://res.cloudinary.com/dekb8xlms/image/upload/v1740148720/Portfolio/69726646-3cd6-4c9b-a066-e1421984d489.png",
             "https://res.cloudinary.com/dekb8xlms/image/upload/v1740148782/Portfolio/c5c149ec-ff86-4eca-9ba2-9fb92cfb2a73.png"
         ],
         desciption: {
@@ -73,10 +73,10 @@ export const projects = [
         date: "Nov 2024",
         gitLink: "https://github.com/Ganesh-Ghadage/LinkedIn-AI-Reply-Chrome-Extension",
         images: [
-            "https://res.cloudinary.com/dekb8xlms/image/upload/v1740151418/Portfolio/Screenshot_2024-12-21_234001_oluh9d.png",
             "https://res.cloudinary.com/dekb8xlms/image/upload/v1740151416/Portfolio/Screenshot_2024-12-21_233926_aliwag.png",
+            "https://res.cloudinary.com/dekb8xlms/image/upload/v1740151418/Portfolio/Screenshot_2024-12-21_234001_oluh9d.png",
+            "https://res.cloudinary.com/dekb8xlms/image/upload/v1740151425/Portfolio/Screenshot_2024-12-22_220956_svchlo.png",
             "https://res.cloudinary.com/dekb8xlms/image/upload/v1740151415/Portfolio/Screenshot_2024-12-22_221023_fynuxr.png",
-            "https://res.cloudinary.com/dekb8xlms/image/upload/v1740151253/Portfolio/4b0313cf-5a89-414a-b5d6-f25d307a11f4.png"
         ],
         desciption: {
             title: "Developed a Chrome extension leveraging Google Gemini AI to generate professional context-aware LinkedIn replies.",
