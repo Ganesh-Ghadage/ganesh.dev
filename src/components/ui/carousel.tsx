@@ -54,12 +54,6 @@ const Slide = ({ project, index, current, handleSlideClick }: SlideProps) => {
     yRef.current = 0;
   };
 
-  const imageLoaded = (event: React.SyntheticEvent<HTMLImageElement>) => {
-    event.currentTarget.style.opacity = "1";
-  };
-
-  // const { src, button, title } = slide;
-
   return (
     <div className="[perspective:1200px] [transform-style:preserve-3d] z-10">
       <li
