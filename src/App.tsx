@@ -9,6 +9,8 @@ import { AboutSection } from './components/sections/About';
 import { MarqueeStrip } from './components/ui/marquee-strip';
 import { Work } from './components/sections/Work';
 import { Project } from './components/sections/Project';
+import { ShootingStars } from './components/ui/shooting-stars';
+import { StarsBackground } from './components/ui/stars-background';
 
 
 const App: React.FC = () => {
@@ -48,6 +50,8 @@ const App: React.FC = () => {
           </div>
         </div>
       </CoolMode>
+      <ShootingStars />
+      <StarsBackground />
 
     </div>
   );
