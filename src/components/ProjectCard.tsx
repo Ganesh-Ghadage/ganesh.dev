@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { ProjectInterface } from '@/shared/interface.ts';
 import GalleryModal from './ui/image-modal.tsx'
 import { useRef, useState } from "react";
-import { useTruncatedElement } from "@/hooks/useTruncatedElement.ts";
 
 function ProjectCard({project} : {project: ProjectInterface}) {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
