@@ -76,10 +76,10 @@ import {
     
         // handy function to split text into characters with support for unicode and emojis
         const splitIntoCharacters = (text: string): string[] => {
-          if (typeof Intl !== "undefined" && "Segmenter" in Intl) {
-            const segmenter = new Intl.Segmenter("en", { granularity: "grapheme" })
-            return Array.from(segmenter.segment(text), ({ segment }) => segment)
-          }
+          // if (typeof Intl !== "undefined" && "Segmenter" in Intl) {
+          //   const segmenter = new Intl.Segmenter("en", { granularity: "grapheme" })
+          //   return Array.from(segmenter.segment(text), ({ segment }) => segment)
+          // }
           // Fallback for browsers that don't support Intl.Segmenter
           return Array.from(text)
         }
