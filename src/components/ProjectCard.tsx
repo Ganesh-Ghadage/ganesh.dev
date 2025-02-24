@@ -48,7 +48,7 @@ function ProjectCard({project} : {project: ProjectInterface}) {
                       rotate: 0,
                       zIndex: 100,
                     }}
-                    className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-400 flex-shrink-0 overflow-hidden"
+                    className="rounded-xl -mr-4 mb-4 p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-400 flex-shrink-0 overflow-hidden"
                   >
                     <img
                       src={image}
@@ -63,13 +63,13 @@ function ProjectCard({project} : {project: ProjectInterface}) {
               </div>
               )}
             </div>
-            <div className="p-4 flex flex-col gap-y-2 mx-auto h-[50vh] md:h-fit overflow-y-auto scrollbar-hidden">
+            <div className={`p-4 flex flex-col gap-y-2 mx-auto ${!isShowingMore ? 'h-fit' : 'h-[50vh] md:h-fit overflow-y-auto scrollbar-hidden'} `}>
               <div ref={descRef} className={`break-words text-start gap-y-1 text-sm ${!isShowingMore && 'line-clamp-3'}`}>
                 { project.desciption.point.map((pnt, idx) => (
                   <p key={idx}>{`> ${pnt}`}</p>))
                 }
               </div>
-              <button onClick={toggleIsShowingMore} className="text-blue-600 text-end ">
+              <button onClick={toggleIsShowingMore} className="text-blue-600 text-end hover:text-blue-800">
                 {isShowingMore ? 'Show less ⩓' : 'Show more ⩔'}
               </button>
             </div>
