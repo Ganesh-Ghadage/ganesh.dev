@@ -2,12 +2,18 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ProjectInterface } from '@/shared/interface.ts';
 import GalleryModal from './ui/image-modal.tsx'
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { useTruncatedElement } from "@/hooks/useTruncatedElement.ts";
 
 function ProjectCard({project} : {project: ProjectInterface}) {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const descRef = useRef<HTMLParagraphElement>(null)
+  const [isShowingMore, setIsShowingMore] = useState<boolean>(false);
+  
+  const toggleIsShowingMore = () => setIsShowingMore(prev => !prev);
+
   return (
-      <div className='h-full w-full bg-white dark:bg-neutral-950 border border-transparent dark:border-neutral-800 relative z-50 flex flex-col flex-1 overflow-hidden'>
+      <div className='h-fit w-full bg-white dark:bg-neutral-950 border border-transparent dark:border-neutral-800 relative z-50 flex flex-col flex-1 overflow-hidden'>
           <div className='flex flex-col '>
             <h4 className="flex flex-col gap-2 items-center text-primary bg-gray-100 dark:bg-neutral-900 p-4 font-bold text-center mb-8">
               <span className="md:text-xl w-fit px-1 py-0.5 rounded-md bg-gray-100 dark:bg-neutral-800 dark:border-neutral-700 border border-gray-200">
@@ -58,12 +64,15 @@ function ProjectCard({project} : {project: ProjectInterface}) {
               </div>
               )}
             </div>
-            <div className="py-10 p-4 flex flex-col gap-y-2  mx-auto h-[50vh] md:h-fit overflow-y-auto scrollbar-hidden">
-              {project.desciption.point.map((pnt, idx) => (
-                <p className="text-sm text-primary" key={idx}>
-                  {pnt}
-                </p>
-              ))}
+            <div className="p-4 flex flex-col gap-y-2 mx-auto h-[50vh] md:h-fit overflow-y-auto scrollbar-hidden">
+              <div ref={descRef} className={`break-words text-start gap-y-1 text-sm ${!isShowingMore && 'line-clamp-3'}`}>
+                { project.desciption.point.map((pnt, idx) => (
+                  <p key={idx}>{`> ${pnt}`}</p>))
+                }
+              </div>
+              <button onClick={toggleIsShowingMore} className="text-blue-600 text-end ">
+                {isShowingMore ? 'Show less ⩓' : 'Show more ⩔'}
+              </button>
             </div>
           </div>
           <div className={`gap-4 flex ${project.link ? "justify-between" : "justify-end" } p-4 bg-gray-100 dark:bg-neutral-900`}>

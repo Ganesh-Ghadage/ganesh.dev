@@ -40,7 +40,7 @@ const App: React.FC = () => {
             <Work />
           </div>
 
-          <div id="projects" className="h-[150vh] flex flex-col">
+          <div id="projects" className="h-[120dvh] flex flex-col">
             <h1 className='text-3xl text-muted pt-4 pl-20'>Project Showoff</h1>
             <Project />
           </div>
