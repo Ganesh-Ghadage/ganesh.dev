@@ -11,7 +11,7 @@ import { Work } from './components/sections/Work';
 import { Project } from './components/sections/Project';
 import { ShootingStars } from './components/ui/shooting-stars';
 import { StarsBackground } from './components/ui/stars-background';
-
+import Contact from './components/sections/Contact';
 
 const App: React.FC = () => {
   return (
@@ -40,13 +40,14 @@ const App: React.FC = () => {
             <Work />
           </div>
 
-          <div id="projects" className="h-[120dvh] flex flex-col">
+          <div id="projects" className="h-[130dvh] md:h-[120dvh] flex flex-col">
             <h1 className='text-3xl text-muted pt-4 pl-20'>Project Showoff</h1>
             <Project />
           </div>
 
           <div id="contact" className="h-screen flex flex-col">
             <h1 className='text-3xl text-muted pt-4 pl-20'>Contact</h1>
+            <Contact />
           </div>
         </div>
       </CoolMode>
