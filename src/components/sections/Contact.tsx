@@ -94,7 +94,7 @@ const Contact = () => {
             className="flex items-center gap-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition"
           >
             <Mail size={20} />
-            Email Me
+            Email
           </a>
 
           <a
@@ -103,7 +103,7 @@ const Contact = () => {
             className="flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition"
           >
             <Download size={20} />
-            Download Resume
+            Resume
           </a>
         </div>
 
