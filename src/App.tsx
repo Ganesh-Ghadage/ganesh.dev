@@ -12,6 +12,7 @@ import { Project } from './components/sections/Project';
 import { ShootingStars } from './components/ui/shooting-stars';
 import { StarsBackground } from './components/ui/stars-background';
 import Contact from './components/sections/Contact';
+import Footer from './components/sections/Footer';
 
 const App: React.FC = () => {
   return (
@@ -45,14 +46,16 @@ const App: React.FC = () => {
             <Project />
           </div>
 
-          <div id="contact" className="h-screen flex flex-col">
-            <h1 className='text-3xl text-muted pt-4 pl-20'>Contact</h1>
+          <div id="contact" className="h-[95vh] flex flex-col">
+            <h1 className='text-3xl text-muted pt-6 pl-20'>Contact</h1>
             <Contact />
           </div>
         </div>
       </CoolMode>
       <ShootingStars />
       <StarsBackground />
+
+      <Footer />
 
     </div>
   );
