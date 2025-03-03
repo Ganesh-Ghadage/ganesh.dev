@@ -46,7 +46,7 @@ const App: React.FC = () => {
             <Project />
           </div>
 
-          <div id="contact" className="h-[95vh] flex flex-col">
+          <div id="contact" className="h-[95vh] flex flex-col mb-20">
             <h1 className='text-3xl text-muted pt-6 pl-20'>Contact</h1>
             <Contact />
           </div>
@@ -55,7 +55,10 @@ const App: React.FC = () => {
       <ShootingStars />
       <StarsBackground />
 
-      <Footer />
+        
+      <div className='h-10'>
+        <Footer />
+      </div>
 
     </div>
   );
